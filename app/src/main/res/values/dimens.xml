@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="homeBannerHeight">1012dp</dimen>
+    <dimen name="homeBtnWidth">228dp</dimen>
+    <dimen name="homeBtnHeight">302dp</dimen>
+    <dimen name="homeBtnIconWidth">114dp</dimen>
+    <dimen name="homeBtnTextSize">30sp</dimen>
+    <dimen name="imgBackWidth">15dp</dimen>
+    <dimen name="imgBackHeight">26dp</dimen>
+</resources>

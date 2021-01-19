@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.home.HomeFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <LinearLayout
+        android:id="@+id/homeBtnPickUp"
+        android:layout_width="@dimen/homeBtnWidth"
+        android:layout_height="@dimen/homeBtnHeight"
+        android:background="@drawable/btn_pickup"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/homeBtnDeliver"
+        app:layout_constraintEnd_toStartOf="@+id/homeBtnDeliver"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homeBtnDeliver">
+
+        <ImageView
+            android:id="@+id/homeBtnImgPickUp"
+            android:layout_width="@dimen/homeBtnIconWidth"
+            android:layout_height="@dimen/homeBtnIconWidth"
+            android:layout_weight="1"
+            android:contentDescription="@string/homeBtnImgContent"
+            android:src="@mipmap/main_pickup" />
+
+        <TextView
+            android:id="@+id/homeBtnPickUpText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/homeBtnPickUpText"
+            android:textColor="@color/homeBtnTextColor"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/homeBtnDeliver"
+        android:layout_width="@dimen/homeBtnWidth"
+        android:layout_height="@dimen/homeBtnHeight"
+        android:background="@drawable/btn_delivery"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/homeBtnStorage"
+        app:layout_constraintEnd_toStartOf="@+id/homeBtnStorage"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeBtnPickUp"
+        app:layout_constraintTop_toTopOf="@+id/homeBtnStorage">
+
+        <ImageView
+            android:id="@+id/homeBtnImgDeliver"
+            android:layout_width="@dimen/homeBtnIconWidth"
+            android:layout_height="@dimen/homeBtnIconWidth"
+            android:layout_weight="1"
+            android:contentDescription="@string/homeBtnImgDeliverContent"
+            android:src="@mipmap/main_send"
+            app:srcCompat="@mipmap/main_send" />
+
+        <TextView
+            android:id="@+id/homeBtnDeliverText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/homeBtnDeliverText"
+            android:textColor="@color/homeBtnTextColor"
+            android:textSize="30sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/homeBtnStorage"
+        android:layout_width="@dimen/homeBtnWidth"
+        android:layout_height="@dimen/homeBtnHeight"
+        android:layout_weight="1"
+        android:background="@drawable/btn_storage"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="@+id/homeBtnSend"
+        app:layout_constraintEnd_toStartOf="@+id/homeBtnSend"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeBtnDeliver"
+        app:layout_constraintTop_toTopOf="@+id/homeBtnSend">
+
+        <ImageView
+            android:id="@+id/homeBtnImgStorage"
+            android:layout_width="@dimen/homeBtnIconWidth"
+            android:layout_height="@dimen/homeBtnIconWidth"
+            android:layout_weight="1"
+            android:contentDescription="@string/homeBtnImgStorageContent"
+            android:src="@mipmap/main_storage"
+            app:srcCompat="@mipmap/main_storage" />
+
+        <TextView
+            android:id="@+id/homeBtnStorageText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/homeBtnStorageText"
+            android:textColor="@color/homeBtnTextColor"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/homeBtnSend"
+        android:layout_width="@dimen/homeBtnWidth"
+        android:layout_height="@dimen/homeBtnHeight"
+        android:layout_weight="1"
+        android:background="@drawable/btn_send"
+        android:gravity="center_horizontal|center_vertical"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toTopOf="@+id/guideline3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/homeBtnStorage"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/homeBtnImgSend"
+            android:layout_width="@dimen/homeBtnIconWidth"
+            android:layout_height="@dimen/homeBtnIconWidth"
+            android:layout_weight="1"
+            android:contentDescription="@string/homeBtnImgSendContent"
+            android:src="@mipmap/main_send1"
+            app:srcCompat="@mipmap/main_send1" />
+
+        <TextView
+            android:id="@+id/homeBtnSendText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/homeBtnSendText"
+            android:textColor="@color/homeBtnTextColor"
+            android:textSize="30sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_begin="600dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

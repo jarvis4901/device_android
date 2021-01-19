@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">UgAndroid</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="homeBtnPickUpText">我要取件</string>
+    <string name="homeBtnDeliverText">派快递件</string>
+    <string name="homeBtnStorageText">暂存物品</string>
+    <string name="homeBtnSendText">我要寄件</string>
+    <string name="homeBtnImgContent">取件</string>
+    <string name="homeBtnImgDeliverContent">派件</string>
+    <string name="homeBtnImgStorageContent">暂存</string>
+    <string name="homeBtnImgSendContent">寄件</string>
+    <string name="back_title">返回</string>
+</resources>
