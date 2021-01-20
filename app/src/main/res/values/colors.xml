@@ -7,6 +7,10 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="c9">#C9C9C9</color>
     <color name="homeBtnTextColor">#000000</color>
     <color name="grey_6">#666666</color>
+    <color name="titileBgColor">#EAEEED</color>
+    <color name="inputBorderColor">#C9C9C9</color>
+    <color name="btnBlue">#1B8AFE</color>
 </resources>
