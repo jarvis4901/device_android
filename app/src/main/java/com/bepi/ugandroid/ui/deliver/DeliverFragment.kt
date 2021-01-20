@@ -10,25 +10,10 @@ import com.bepi.ugandroid.R
 
 class DeliverFragment : Fragment() {
 
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_deliver, container, false)
-    }
-
-    companion object {
-
-        @JvmStatic
-        fun newInstance() =
-            DeliverFragment().apply {
-
-            }
     }
 }

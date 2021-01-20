@@ -40,7 +40,7 @@ class HomeFragment : Fragment() {
 
 
     /**
-     * 首页四个按钮的跳转
+     * 首页四个入口按钮的跳转
      */
     fun navigate(v: View) {
         var action: Int? = null
