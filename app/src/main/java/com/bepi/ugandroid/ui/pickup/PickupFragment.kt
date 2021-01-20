@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.activityViewModels
 import com.bepi.ugandroid.R
 import com.bepi.ugandroid.base.BaseFragment
-import com.bepi.ugandroid.entity.base.Route
+import com.bepi.ugandroid.base.entity.Route
 import com.bepi.ugandroid.ui.MainViewModel
 
 

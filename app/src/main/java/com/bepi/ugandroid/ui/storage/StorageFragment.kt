@@ -1,13 +1,14 @@
 package com.bepi.ugandroid.ui.storage
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.bepi.ugandroid.R
+import com.bepi.ugandroid.base.BaseFragment
+import com.bepi.ugandroid.base.entity.Route
 
-class StorageFragment : Fragment() {
+class StorageFragment : BaseFragment(Route(name = "storage", title = "暂存物品")) {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

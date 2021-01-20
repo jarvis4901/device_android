@@ -1,3 +1,3 @@
-package com.bepi.ugandroid.entity.base
+package com.bepi.ugandroid.base.entity
 
 data class Route(val name: String, val title: String)

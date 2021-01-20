@@ -1,4 +1,4 @@
-package com.bepi.ugandroid.entity.base
+package com.bepi.ugandroid.base.entity
 
 data class BaseResp<T>(
     val code: Int = 0,
