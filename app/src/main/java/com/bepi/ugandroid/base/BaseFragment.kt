@@ -35,7 +35,7 @@ open class BaseFragment(val route: Route) :
      */
     fun initHeader(view: View) {
         titleRef = WeakReference(view.findViewById<View>(R.id.titleText) as TextView)
-        titleRef!!.get()!!.setText(route.title)
+        titleRef?.get()?.setText(route.title)
         //页面倒计时
         countDownTimer = object : CountDownTimer(COUNT_DELAY, 1000) {
             override fun onFinish() {
