@@ -99,7 +99,7 @@
         app:layout_constraintGuide_begin="715dp" />
 
     <LinearLayout
-        android:layout_width="400dp"
+        android:layout_width="450dp"
         android:layout_height="0dp"
         android:layout_marginEnd="113dp"
         android:orientation="vertical"
@@ -125,24 +125,32 @@
             android:gravity="center_vertical"
             android:orientation="horizontal">
 
-            <EditText
-                android:id="@+id/editText"
-                android:layout_width="288dp"
-                android:layout_height="60dp"
+            <com.bepi.ugandroid.ui.common.CustomEditText
+                android:id="@+id/customEditText"
+                android:layout_width="220dp"
+                android:layout_height="55dp"
                 android:layout_weight="1"
-                android:background="@drawable/border_input"
-                android:gravity="center"
-                android:paddingLeft="15dp"
-                android:text="请输入取件码"
-                android:textAlignment="viewStart"
-                android:textColor="#666666"
-                android:textSize="21sp" />
+                android:layout_marginRight="20dp"
+                app:pwdCount="6"
+                app:style="roundRectangle" />
+
+            <!--            <EditText-->
+            <!--                android:id="@+id/editText"-->
+            <!--                android:layout_width="288dp"-->
+            <!--                android:layout_height="60dp"-->
+            <!--                android:layout_weight="1"-->
+            <!--                android:background="@drawable/border_input"-->
+            <!--                android:gravity="center"-->
+            <!--                android:paddingLeft="15dp"-->
+            <!--                android:text="请输入取件码"-->
+            <!--                android:textAlignment="viewStart"-->
+            <!--                android:textColor="#666666"-->
+            <!--                android:textSize="21sp" />-->
 
             <TextView
                 android:id="@+id/button"
-                android:layout_width="160dp"
+                android:layout_width="130dp"
                 android:layout_height="60dp"
-                android:layout_weight="1"
                 android:background="@drawable/btn_common"
                 android:gravity="center"
                 android:text="点击取件"

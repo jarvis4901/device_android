@@ -7,37 +7,37 @@
 
     <Row>
         <Key
-            android:codes="49"
+            android:codes="1"
             android:keyLabel="1" />
         <Key
-            android:codes="50"
+            android:codes="2"
             android:keyLabel="2" />
         <Key
-            android:codes="51"
+            android:codes="3"
             android:keyLabel="3" />
     </Row>
 
     <Row>
         <Key
-            android:codes="52"
+            android:codes="4"
             android:keyLabel="4" />
         <Key
-            android:codes="53"
+            android:codes="5"
             android:keyLabel="5" />
         <Key
-            android:codes="54"
+            android:codes="6"
             android:keyLabel="6" />
     </Row>
 
     <Row>
         <Key
-            android:codes="55"
+            android:codes="7"
             android:keyLabel="7" />
         <Key
-            android:codes="56"
+            android:codes="8"
             android:keyLabel="8" />
         <Key
-            android:codes="57"
+            android:codes="9"
             android:keyLabel="9" />
     </Row>
 
@@ -46,7 +46,7 @@
             android:codes="-10"
             android:keyLabel="" />
         <Key
-            android:codes="48"
+            android:codes="0"
             android:keyLabel="0" />
         <Key
             android:codes="-5"

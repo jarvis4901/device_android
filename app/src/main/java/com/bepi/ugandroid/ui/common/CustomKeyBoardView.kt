@@ -1,6 +1,7 @@
 package com.bepi.ugandroid.ui.common
 
 import android.content.Context
+import android.content.res.Resources
 import android.graphics.Canvas
 import android.graphics.Rect
 import android.graphics.drawable.ColorDrawable
@@ -10,6 +11,7 @@ import android.inputmethodservice.KeyboardView
 import android.inputmethodservice.KeyboardView.OnKeyboardActionListener
 import android.util.AttributeSet
 import android.util.Log
+import androidx.core.content.res.ResourcesCompat
 import com.bepi.ugandroid.R
 import java.util.*
 
@@ -57,7 +59,11 @@ class CustomKeyBoardView : KeyboardView, OnKeyboardActionListener {
                 // 删除删除按键背景
                 drawKeyBackground(key, canvas, delKeyBackgroundColor)
                 // 绘制删除按键图标
-                drawKeyIcon(key, canvas, resources.getDrawable(R.drawable.icon_backspace))
+                drawKeyIcon(
+                    key,
+                    canvas,
+                    ResourcesCompat.getDrawable(getResources(), R.drawable.icon_backspace, null)
+                )
             }
         }
     }
@@ -124,7 +130,7 @@ class CustomKeyBoardView : KeyboardView, OnKeyboardActionListener {
             if (primaryCode == Keyboard.KEYCODE_DELETE) {
                 listener!!.onDelete()
             } else {
-//                listener!!.onInput(primaryCode as Char.toString())
+                listener!!.onInput(primaryCode.toString())
             }
         }
     }
@@ -148,7 +154,7 @@ class CustomKeyBoardView : KeyboardView, OnKeyboardActionListener {
     }
 
     companion object {
-        private const val TAG = "PwdKeyboardView"
+        private const val TAG = "CustomKeyBoard"
         private const val KEY_EMPTY = -10
     }
 }

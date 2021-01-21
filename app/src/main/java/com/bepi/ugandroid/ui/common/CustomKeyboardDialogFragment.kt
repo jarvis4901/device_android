@@ -1,26 +1,24 @@
 package com.bepi.ugandroid.ui.common
 
 import android.app.Dialog
-import android.content.DialogInterface
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.util.Log
 import android.view.*
-import android.widget.ImageView
-import android.widget.Toast
 import androidx.annotation.Nullable
 import androidx.fragment.app.DialogFragment
 import com.bepi.ugandroid.R
-import com.bepi.ugandroid.ui.common.CustomKeyBoardView
+import java.lang.ref.WeakReference
 
 
-/**
- * Created by jhn on 2018/9/20.
- * Description :
- */
-class CustomKeyboardDialogFragment : DialogFragment() {
+class CustomKeyboardDialogFragment : DialogFragment(), CustomEditText.OnTextInputListener {
+    private lateinit var editText: WeakReference<CustomEditText>
 
+    fun bindEditText(et: CustomEditText) {
+        editText = WeakReference(et)
+        editText.get()?.setOnTextInputListener(this)
+    }
 
     @Nullable
     override fun onCreateView(
@@ -32,30 +30,23 @@ class CustomKeyboardDialogFragment : DialogFragment() {
         getDialog()?.requestWindowFeature(Window.FEATURE_NO_TITLE)
         getDialog()?.setCanceledOnTouchOutside(false)
         val view: View = inflater.inflate(R.layout.fragment_dialog_keyboard, null)
-//        val exitImgView: ImageView = view.findViewById(R.id.iv_exit)
-//        exitImgView.setOnClickListener(object : DialogInterface.OnClickListener() {
-//            fun onClick(v: View?) {
-//                this@C.dismiss()
-//            }
-//        })
-//        val editText: PwdEditText = view.findViewById(R.id.et_input)
-//        editText.setOnTextInputListener(this)
+
         val keyboardView: CustomKeyBoardView =
             view.findViewById(R.id.key_board) as CustomKeyBoardView
         keyboardView.setOnKeyListener(object : CustomKeyBoardView.OnKeyListener {
 
             override fun onInput(text: String?) {
-//                TODO("Not yet implemented")
                 Log.d(TAG, "onInput: ${text}")
+                editText.get()?.append(text)
             }
 
 
             override fun onDelete() {
                 Log.d(TAG, "onDelete: ")
-//                val content: String = editText.getText().toString()
-//                if (content.length > 0) {
-//                    editText.setText(content.substring(0, content.length - 1))
-//                }
+                val content: String = editText.get()?.getText().toString()
+                if (content.length > 0) {
+                    editText.get()?.setText(content.substring(0, content.length - 1))
+                }
             }
         })
         return view
@@ -78,21 +69,27 @@ class CustomKeyboardDialogFragment : DialogFragment() {
                 //设置dialog的位置在底部
                 lp.gravity = Gravity.BOTTOM
 
-                window?.setAttributes(lp)
+                window.setAttributes(lp)
             }
             //去掉dialog默认的padding
             window?.getDecorView()?.setPadding(0, 0, 0, 0);
             window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         }
-
     }
 
-    fun onComplete(result: String) {
-        Log.d(TAG, "onComplete: result = $result")
-        Toast.makeText(getContext(), "input complete : $result", Toast.LENGTH_SHORT).show()
+
+    override fun dismiss() {
+        super.dismiss()
+        Log.i(TAG, "dismiss")
     }
 
     companion object {
-        private const val TAG = "PayDialogFragment"
+        private const val TAG = "CustomKeyBoardFagment"
     }
+
+    override fun onComplete(result: String?) {
+        Log.i(TAG, "onComplete")
+    }
+
+
 }

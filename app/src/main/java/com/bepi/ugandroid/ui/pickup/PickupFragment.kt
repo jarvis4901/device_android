@@ -45,6 +45,7 @@ class PickupFragment() : BaseFragment(Route(name = "pickup", title = "取快递"
 //                .show()
             val cus: CustomKeyboardDialogFragment = CustomKeyboardDialogFragment()
             cus.show(childFragmentManager,"pickupfragment")
+            cus.bindEditText(customEditText)
         }
         super.onViewCreated(view, savedInstanceState)
     }
