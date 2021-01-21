@@ -13,4 +13,9 @@
         <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
     </style>
+
+<!--    <style name="mydialog">-->
+<!--        <item name="@android:windowEnterAnimation">@anim/dialog_enter</item>-->
+<!--        <item name="@android:windowExitAnimation">@anim/dialog_exit</item>-->
+<!--    </style>-->
 </resources>

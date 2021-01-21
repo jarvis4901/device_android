@@ -13,4 +13,7 @@
     <color name="titileBgColor">#EAEEED</color>
     <color name="inputBorderColor">#C9C9C9</color>
     <color name="btnBlue">#1B8AFE</color>
+    <color name="dividerColor">#1B8AFE</color>
+
+
 </resources>

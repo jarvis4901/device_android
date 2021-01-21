@@ -1,5 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_49">49dp</dimen>
+
+    <dimen name="sp_28">28sp</dimen>
+
     <dimen name="homeBannerHeight">1012dp</dimen>
     <dimen name="homeBtnWidth">228dp</dimen>
     <dimen name="homeBtnHeight">302dp</dimen>
