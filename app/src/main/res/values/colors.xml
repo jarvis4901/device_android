@@ -15,5 +15,8 @@
     <color name="btnBlue">#1B8AFE</color>
     <color name="dividerColor">#1B8AFE</color>
 
+    <color name="keyboardBgColor">#CCCCCC</color>
+    <color name="keyboardTextColor">#494949</color>
+
 
 </resources>

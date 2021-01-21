@@ -10,6 +10,7 @@ import com.bepi.ugandroid.base.BaseFragment
 import com.bepi.ugandroid.base.entity.Route
 import com.bepi.ugandroid.base.ui.BaseDialog
 import com.bepi.ugandroid.ui.MainViewModel
+import com.bepi.ugandroid.ui.common.CustomKeyboardDialogFragment
 import kotlinx.android.synthetic.main.fragment_pickup.*
 
 
@@ -28,21 +29,23 @@ class PickupFragment() : BaseFragment(Route(name = "pickup", title = "取快递"
 //        editText.setOnClickListener(View.OnClickListener {
 //
 //        })
-        button.setOnClickListener({
-            BaseDialog()
-                .setFragmentManager(childFragmentManager)
-                .setTitle("添加xx")
-                .setMessage("success")
-                .setCanceledOnTouchOutside(true) // 点击dialog外部关闭dialog
-                .setDismissMethod { // Dialog消失回调
-
-                }
-                .setPositiveButtonMethod { dialog, view -> // 点击底部右侧按钮回调
-                    dialog?.dismiss()
-
-                }
-                .show()
-        })
+        button.setOnClickListener {
+//            BaseDialog()
+//                .setFragmentManager(childFragmentManager)
+//                .setTitle("添加xx")
+//                .setMessage("success")
+//                .setCanceledOnTouchOutside(true) // 点击dialog外部关闭dialog
+//                .setDismissMethod { // Dialog消失回调
+//
+//                }
+//                .setPositiveButtonMethod { dialog, view -> // 点击底部右侧按钮回调
+//                    dialog?.dismiss()
+//
+//                }
+//                .show()
+            val cus: CustomKeyboardDialogFragment = CustomKeyboardDialogFragment()
+            cus.show(childFragmentManager,"pickupfragment")
+        }
         super.onViewCreated(view, savedInstanceState)
     }
 

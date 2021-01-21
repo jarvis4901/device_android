@@ -16,26 +16,28 @@ import androidx.fragment.app.FragmentManager
 import com.bepi.ugandroid.R
 import kotlinx.android.synthetic.main.base_dialog.*
 
+
+//BaseDialog()
+//.setFragmentManager(supportFragmentManager)
+//.setTitle("添加xx")
+//.setDialogView(R.layout.dialog_xx)
+//.setWindowSize(800, 600)
+//.setBuildMethod { _, view -> // DialogFragment onCreateView方法时回调
+//view?.run {
+//findViewById<EditText>(R.id.xx).setText("")
+//...
+//}
+//}
+//.setNegativeToDismiss(false) // 取消点击底部左侧按钮自动关闭dialog
+//.setNegativeButtonMethod { dialog, view -> // 点击底部左侧按钮回调
+//...
+//dialog?.dismiss()
+//}
+//.show()
+
+
 /**
- *
- * 自定义样式
- * BaseDialog()
-.setFragmentManager(supportFragmentManager)
-.setTitle("添加xx")
-.setDialogView(R.layout.dialog_xx)
-.setWindowSize(800, 600)
-.setBuildMethod { _, view -> // DialogFragment onCreateView方法时回调
-view?.run {
-findViewById<EditText>(R.id.xx).setText("")
-...
-}
-}
-.setNegativeToDismiss(false) // 取消点击底部左侧按钮自动关闭dialog
-.setNegativeButtonMethod { dialog, view -> // 点击底部左侧按钮回调
-...
-dialog?.dismiss()
-}
-.show()
+ * 自定义基础dialog
  */
 class BaseDialog : DialogFragment() {
 

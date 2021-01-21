@@ -2,7 +2,6 @@
 <resources>
     <dimen name="dp_2">2dp</dimen>
     <dimen name="dp_49">49dp</dimen>
-
     <dimen name="sp_28">28sp</dimen>
 
     <dimen name="homeBannerHeight">1012dp</dimen>
@@ -12,4 +11,11 @@
     <dimen name="homeBtnTextSize">30sp</dimen>
     <dimen name="imgBackWidth">15dp</dimen>
     <dimen name="imgBackHeight">26dp</dimen>
+
+
+    <dimen name="keyboardWidth">180dp</dimen>
+    <dimen name="keyboardHeight">80dp</dimen>
+    <dimen name="keyboardGap">20dp</dimen>
+    <dimen name="keyboardSize">28dp</dimen>
+
 </resources>
