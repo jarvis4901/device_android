@@ -15,7 +15,7 @@ import kotlinx.android.synthetic.main.common_title.*
 open class BaseFragment(val route: Route) :
     Fragment() {
     private val COUNT_DELAY: Long = 120 * 1000 //定义总时长 120秒
-    var countDownTimer: CountDownTimer? = null
+    private var countDownTimer: CountDownTimer? = null
 
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {

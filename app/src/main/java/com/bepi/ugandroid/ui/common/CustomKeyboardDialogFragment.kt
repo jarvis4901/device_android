@@ -11,9 +11,12 @@ import androidx.fragment.app.DialogFragment
 import com.bepi.ugandroid.R
 import java.lang.ref.WeakReference
 
-
+/**
+ * 自定义键盘fragment
+ */
 class CustomKeyboardDialogFragment : DialogFragment(), CustomEditText.OnTextInputListener {
     private lateinit var editText: WeakReference<CustomEditText>
+    private lateinit var keyboardView: WeakReference<CustomKeyBoardView>
 
     fun bindEditText(et: CustomEditText) {
         editText = WeakReference(et)
@@ -31,9 +34,9 @@ class CustomKeyboardDialogFragment : DialogFragment(), CustomEditText.OnTextInpu
         getDialog()?.setCanceledOnTouchOutside(false)
         val view: View = inflater.inflate(R.layout.fragment_dialog_keyboard, null)
 
-        val keyboardView: CustomKeyBoardView =
-            view.findViewById(R.id.key_board) as CustomKeyBoardView
-        keyboardView.setOnKeyListener(object : CustomKeyBoardView.OnKeyListener {
+        keyboardView =
+            WeakReference(view.findViewById(R.id.key_board))
+        keyboardView.get()?.setOnKeyListener(object : CustomKeyBoardView.OnKeyListener {
 
             override fun onInput(text: String?) {
                 Log.d(TAG, "onInput: ${text}")
