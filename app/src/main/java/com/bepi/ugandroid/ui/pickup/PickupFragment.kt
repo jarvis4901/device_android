@@ -50,5 +50,9 @@ class PickupFragment() : BaseFragment(Route(name = "pickup", title = "取快递"
         super.onViewCreated(view, savedInstanceState)
     }
 
+    override fun initView() {
+//        TODO("Not yet implemented")
+    }
+
 
 }

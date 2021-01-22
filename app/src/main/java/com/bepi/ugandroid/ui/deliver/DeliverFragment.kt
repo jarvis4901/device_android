@@ -9,7 +9,10 @@ import com.bepi.ugandroid.base.BaseFragment
 import com.bepi.ugandroid.base.entity.Route
 
 
-class DeliverFragment : BaseFragment(Route(name = "deliver", title = "派快递件")){
+class DeliverFragment : BaseFragment(Route(name = "deliver", title = "派快递件")) {
+    override fun initView() {
+//        TODO("Not yet implemented")
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

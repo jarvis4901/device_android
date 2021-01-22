@@ -12,7 +12,7 @@ import com.bepi.ugandroid.R
 import com.bepi.ugandroid.base.entity.Route
 import kotlinx.android.synthetic.main.common_title.*
 
-open class BaseFragment(val route: Route) :
+abstract class BaseFragment(val route: Route) :
     Fragment() {
     private val COUNT_DELAY: Long = 120 * 1000 //定义总时长 120秒
     private var countDownTimer: CountDownTimer? = null
@@ -20,13 +20,14 @@ open class BaseFragment(val route: Route) :
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        initView(view)
+        initView()
+        if (route.hasHeader) {
+            initHeader(view)
+        }
     }
 
 
-    fun initView(view: View) {
-        initHeader(view)
-    }
+    abstract fun initView()
 
 
     // 标题栏初始化
@@ -67,4 +68,5 @@ open class BaseFragment(val route: Route) :
         countDownTimer?.cancel() //销毁定时器
         countDownTimer = null
     }
+
 }

@@ -9,6 +9,9 @@ import com.bepi.ugandroid.base.BaseFragment
 import com.bepi.ugandroid.base.entity.Route
 
 class StorageFragment : BaseFragment(Route(name = "storage", title = "暂存物品")) {
+    override fun initView() {
+//        TODO("Not yet implemented")
+    }
 
 
     override fun onCreate(savedInstanceState: Bundle?) {

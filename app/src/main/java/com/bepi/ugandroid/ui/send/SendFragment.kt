@@ -9,6 +9,9 @@ import com.bepi.ugandroid.base.BaseFragment
 import com.bepi.ugandroid.base.entity.Route
 
 class SendFragment : BaseFragment(Route(name = "send", title = "寄件")) {
+    override fun initView() {
+//        TODO("Not yet implemented")
+    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

@@ -9,9 +9,11 @@ import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.bepi.ugandroid.R
+import com.bepi.ugandroid.base.BaseFragment
+import com.bepi.ugandroid.base.entity.Route
 import kotlinx.android.synthetic.main.fragment_home.*
 
-class HomeFragment : Fragment() {
+class HomeFragment : BaseFragment(Route(name = "home", hasHeader = false)) {
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,13 +25,14 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+    }
 
+    override fun initView() {
         //绑定按钮跳转
         homeBtnPickUp.setOnClickListener { view -> navigate(view) }
         homeBtnDeliver.setOnClickListener { view -> navigate(view) }
         homeBtnStorage.setOnClickListener { view -> navigate(view) }
         homeBtnSend.setOnClickListener { view -> navigate(view) }
-
     }
 
 
